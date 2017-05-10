@@ -2,6 +2,10 @@ body{
     margin: 0;
     margin-bottom: 20px;
 }
+.landscapeWarning{
+    visibility: hidden;
+    display: none;
+}
 .panning {
 	width: auto;
 	background: url('../Images/back1.jpg');
@@ -10,7 +14,7 @@ body{
     background-attachment: fixed;
 }
 .akshatContainer{
-    margin-top: 200px;
+    margin-top: 50px;
     text-align: center;
 }
 .akshatImage{
@@ -197,6 +201,11 @@ a:visited{
     color: initial;
 }
 /** Media Queries **/
+@media screen and(max-height:470px){
+    .akshatContainer{
+        margin-top: 108px;
+    }
+}
 @media screen and (min-width:375px){
     #address{
         margin-left: 59px;
@@ -206,6 +215,14 @@ a:visited{
     }
     .cover{
         margin-left:66px !important;
+    }
+}
+@media screen and (min-width: 412px){
+    #address{
+        margin-left: 75px;
+    }
+    .links{
+        margin-left: 15px;
     }
 }
 @media screen and (min-width: 425px) {
@@ -265,13 +282,13 @@ a:visited{
 
 @media screen and (min-width: 1024px){
     .akshatImage{
-        height: 263px;
+        height: 224px;
     }
     .quotes{
         margin-left: 200px;
     }
     .designation{
-        font-size: 2.0em;
+        font-size: 1.4em;
     }
     .akshatContainer{
         margin-top: 78px;
@@ -389,5 +406,18 @@ a:visited{
     }
     .other-method{
         width: 291px;
+    }
+}
+
+@media only screen and (orientation : landscape){
+    .landscapeWarning{
+        visibility: visible;
+        display: block;
+    }
+    header{
+        visibility: hidden;
+    }
+    main{
+        visibility: hidden;
     }
 }
